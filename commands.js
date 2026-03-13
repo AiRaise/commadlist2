@@ -311,35 +311,15 @@ const COMMANDS = [
   },
   {
     category: "share",
-    title: "Step 10: 拡張機能の共有",
+    title: "Step 10: GitHubに共有",
     emoji: "\u{1F4E6}",
     color: "#2d3436",
-    description: "コマンド追加後にビルド&共有する手順",
+    description: "変更をGitHubにコミット&プッシュ",
     items: [
       {
-        command: "git add commands.js src/commands.js src/commandListProvider.js index.html",
-        description: "変更ファイルをステージングする",
-        example: "コマンドを追加・修正した後に実行",
-      },
-      {
-        command: 'git commit -m "feat: コマンドを追加・更新"',
-        description: "変更をコミットする",
-        example: "メッセージは内容に合わせて変更",
-      },
-      {
-        command: "git push origin main",
-        description: "GitHubにプッシュする",
-        example: "リモートリポジトリに反映",
-      },
-      {
-        command: "npx @vscode/vsce package --allow-missing-repository",
-        description: ".vsixパッケージをビルドする",
-        example: "共有用のインストールファイルを生成",
-      },
-      {
-        command: "code --install-extension claude-code-commands-0.1.0.vsix --force",
-        description: "ビルドした拡張機能をインストールする",
-        example: "自分の環境にも最新を反映",
+        command: "GitHubにコミット&プッシュして",
+        description: "Claudeに伝えるだけでOK",
+        example: "変更をまとめてGitHubに反映してくれる",
       },
     ],
   },
