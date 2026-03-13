@@ -4,12 +4,32 @@ const COMMANDS = [
     title: "Step 0: 初期セットアップ",
     emoji: "\u{1F528}",
     color: "#f39c12",
-    description: "最初に1回だけ実行! CCAGIを使えるようにする",
+    description: "はじめての方はここから! 上から順に進めよう",
     items: [
       {
+        command: "VS Codeを起動する",
+        description: "Step 1: アプリを開く",
+        example: "見つからない場合はCmd+Spaceで検索",
+      },
+      {
+        command: "紙のマーク → フォルダーを開く",
+        description: "Step 2: サイドバーからフォルダを開く",
+        example: "左上のエクスプローラーアイコンをクリック",
+      },
+      {
+        command: "新しいフォルダを英語名で作成して選択",
+        description: "Step 3: 作業フォルダを用意する",
+        example: "OK: my-project / NG: マイプロジェクト",
+      },
+      {
         command: "ccagi-sdk init",
-        description: "CCAGIを初期化する",
-        example: "リポジトリにCCAGI環境をセットアップ",
+        description: "Step 4: ターミナルでCCAGIを初期化する",
+        example: "ターミナルの開き方: Ctrl+`（バッククォート）",
+      },
+      {
+        command: "claude",
+        description: "Step 5: Claude Codeを起動する",
+        example: "これでAIと対話できるようになる!",
       },
     ],
   },
