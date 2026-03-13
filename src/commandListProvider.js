@@ -84,6 +84,7 @@ class CommandListProvider {
       <button class="tab" data-category="phase">&#127919; Phase</button>
       <button class="tab" data-category="quality">&#128737; 品質</button>
       <button class="tab" data-category="agent">&#129302; Agent</button>
+      <button class="tab" data-category="share">&#128230; 共有</button>
       <button class="tab" data-category="issue">&#128203; Issue</button>
     </nav>
   </header>
