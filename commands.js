@@ -1,5 +1,19 @@
 const COMMANDS = [
   {
+    category: "setup",
+    title: "Step 0: 初期セットアップ",
+    emoji: "\u{1F528}",
+    color: "#f39c12",
+    description: "最初に1回だけ実行! CCAGIを使えるようにする",
+    items: [
+      {
+        command: "ccagi-sdk init",
+        description: "CCAGIを初期化する",
+        example: "リポジトリにCCAGI環境をセットアップ",
+      },
+    ],
+  },
+  {
     category: "basic",
     title: "Step 1: 基本操作",
     emoji: "\u{1F680}",
@@ -180,6 +194,147 @@ const COMMANDS = [
         command: 'echo "指示" | claude',
         description: "パイプでテキストを渡して実行",
         example: 'echo "Hello" | claude',
+      },
+    ],
+  },
+  {
+    category: "phase",
+    title: "Step 7: 開発フロー（Phase実行）",
+    emoji: "\u{1F3AF}",
+    color: "#00b894",
+    description: "要件定義からデプロイまで順番に進めよう",
+    items: [
+      {
+        command: "/generate-requirements",
+        description: "要件定義書を自動生成する",
+        example: "Phase 1: URLやドキュメントから要件を作成",
+      },
+      {
+        command: "/spec-create",
+        description: "機能仕様書を作成する",
+        example: "Phase 2: 要件定義をもとに設計書を生成",
+      },
+      {
+        command: "/design-system",
+        description: "デザインシステムを生成する",
+        example: "Phase 2: カラー・フォント・コンポーネント定義",
+      },
+      {
+        command: "/create-ssot-issue",
+        description: "SSOT Issueを作成する",
+        example: "Phase 3: 全ドキュメントを参照するIssueを起票",
+      },
+      {
+        command: "/implement-app",
+        description: "アプリケーションを実装する",
+        example: "Phase 4: 設計書ベースでコード自動生成",
+      },
+      {
+        command: "/test",
+        description: "テストを実行する",
+        example: "Phase 5: /test --mode e2e など各種テスト",
+      },
+      {
+        command: "/generate-docs",
+        description: "ドキュメントを自動生成する",
+        example: "Phase 6: コードからドキュメント作成",
+      },
+      {
+        command: "/deploy-dev",
+        description: "開発環境にデプロイする",
+        example: "Phase 7: AWS開発環境へ自動デプロイ",
+      },
+    ],
+  },
+  {
+    category: "quality",
+    title: "Step 8: 品質チェック・レビュー",
+    emoji: "\u{1F6E1}",
+    color: "#e17055",
+    description: "コードの品質を保つための必須チェック",
+    items: [
+      {
+        command: "/review-execute",
+        description: "AIコードレビューを実行する",
+        example: "ReviewAgent（剣持謙二）が品質チェック",
+      },
+      {
+        command: "/security-scan",
+        description: "セキュリティ脆弱性をスキャンする",
+        example: "OWASP基準でセキュリティチェック",
+      },
+      {
+        command: "/mock-detector",
+        description: "モック・ダミーデータを検出する",
+        example: "本番コードに残った仮データを発見",
+      },
+      {
+        command: "/quality-score",
+        description: "品質スコアを算出する",
+        example: "コード品質を数値で確認",
+      },
+    ],
+  },
+  {
+    category: "agent",
+    title: "Step 9: AIエージェント",
+    emoji: "\u{1F916}",
+    color: "#6c5ce7",
+    description: "AIエージェントに作業を任せよう",
+    items: [
+      {
+        command: "/agent-run",
+        description: "エージェントを起動して自律実行させる",
+        example: "Issue番号を渡すと自動で実装してくれる",
+      },
+      {
+        command: "/ccagi-auto",
+        description: "全自動モードで自律実行する",
+        example: "Issueを検出して自動で処理を進める",
+      },
+      {
+        command: "コードレビューして",
+        description: "自然言語でReviewAgentを呼び出す",
+        example: "剣持謙二が品質チェックを実行",
+      },
+      {
+        command: "このIssueを実装して",
+        description: "自然言語でCodeGenAgentを呼び出す",
+        example: "源（Gen）がIssue分析・コード生成",
+      },
+      {
+        command: "AWSにデプロイして",
+        description: "自然言語でDeploymentAgentを呼び出す",
+        example: "航（Wataru）がECS/CloudFrontにデプロイ",
+      },
+    ],
+  },
+  {
+    category: "issue",
+    title: "Step 10: Issue・PR管理",
+    emoji: "\u{1F4CB}",
+    color: "#0984e3",
+    description: "Issue起票からPR作成まで",
+    items: [
+      {
+        command: "/create-issue",
+        description: "GitHub Issueを対話的に作成する",
+        example: "タイトルと内容を入力してIssue起票",
+      },
+      {
+        command: "/pr-create",
+        description: "Pull Requestを自動作成する",
+        example: "変更内容からDraft PRを生成",
+      },
+      {
+        command: "/git-sync",
+        description: "Gitリポジトリを同期する",
+        example: "リモートとの差分を解消",
+      },
+      {
+        command: "/ccagi-todos",
+        description: "TODOコメントを検出してIssue化する",
+        example: "コード内のTODOを自動でIssueに変換",
       },
     ],
   },
