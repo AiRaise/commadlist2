@@ -1,0 +1,35 @@
+{
+  "name": "claude-code-commands",
+  "displayName": "Claude Code コマンドリスト",
+  "description": "Claude Codeのコマンドをサイドバーから選んでターミナルに送信",
+  "version": "0.1.0",
+  "publisher": "sii",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "icon": "media/icon.png",
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "claude-code-sidebar",
+          "title": "Claude Code Commands",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "claude-code-sidebar": [
+        {
+          "type": "webview",
+          "id": "claudeCodeCommands.commandList",
+          "name": "コマンドリスト"
+        }
+      ]
+    }
+  }
+}

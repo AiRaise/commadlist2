@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code コマンドリスト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header>
+    <div class="logo-area">
+      <span class="logo-icon">&#9889;</span>
+      <h1>Claude Code<br><span class="title-accent">コマンドリスト</span></h1>
+    </div>
+    <p class="subtitle">コマンドをタップしてサクッとコピー!</p>
+    <div class="search-bar">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" id="search" placeholder="コマンドを検索..." autocomplete="off">
+    </div>
+    <nav class="category-tabs" id="tabs">
+      <button class="tab active" data-category="all">&#127912; すべて</button>
+      <button class="tab" data-category="basic">&#128640; 基本</button>
+      <button class="tab" data-category="conversation">&#128172; 会話</button>
+      <button class="tab" data-category="file">&#128736; 操作</button>
+      <button class="tab" data-category="git">&#128038; Git</button>
+      <button class="tab" data-category="customize">&#9881; 応用</button>
+      <button class="tab" data-category="options">&#9889; 起動</button>
+    </nav>
+  </header>
+
+  <main id="commands-container"></main>
+
+  <div class="toast" id="toast">&#10004; コピーしました!</div>
+
+  <script src="commands.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
